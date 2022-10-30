@@ -2,7 +2,9 @@
   #include <WiFi.h>
   #include <WiFiMulti.h>
   #include <WiFiUdp.h>
-
+  IPAddress IP(192, 168, 1, 121);
+  IPAddress gateway(192, 168, 1, 1);
+  IPAddress subnet(255, 255, 255, 0);
   const char* udpAddress = "192.168.1.255";
   const int udpPort = 9999;
 
@@ -50,6 +52,8 @@
     wifiMulti.addAP("ssid2", "password2");
     wifiMulti.addAP("ssid3", "password3");
     wifiMulti.addAP("ssid4", "password4");
+    
+    WiFi.config(IP, gateway, subnet);
 
   Serial.println("Connection au Wifi...");
 
