@@ -1,4 +1,4 @@
-  //udp
+  //udp imu ino for agopengps by manu. manu@couvercelle.eu
   #include <WiFi.h>
   #include <WiFiMulti.h>
   #include <WiFiUdp.h>
